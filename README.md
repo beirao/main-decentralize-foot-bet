@@ -1,0 +1,1 @@
+# main decentralize foot bet
