@@ -31,7 +31,7 @@ V - [Frontend - Web Interface](https://github.com/beirao/frontend-decentralize-f
   - Click **Bet**
   - Valid the transaction on Metamask
 
-![](Annexes/match_demo2.png)
+<img src="Annexes/match_demo2.png" width="400" height="400" />
 
 ## How does it work?
 
@@ -46,11 +46,11 @@ V - [Frontend - Web Interface](https://github.com/beirao/frontend-decentralize-f
 - You can see the total **Volume** lock on the smart contract.
 - By selecting a side and an amount you will be able to see the **Multiplier** of your bet if you win at the time of the bet according to the volume and other people bets.
 
-![](Annexes/match_demo3.png)
+<img src="Annexes/match_demo3.png" width="400" height="400" />
 
 - Once the match started, wait 4 hours and if you had bet the right side you will be able to see your reward on the **/Rewards** page.
 
-![](Annexes/match_demo4.png)
+<img src="Annexes/match_demo4.png" width="400" height="400" />
 
 ## Project structure
 
