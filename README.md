@@ -1,4 +1,4 @@
-# Main repository for : decentralize-foot-bet
+# BoarBet
 
 #### Key-words :
 
@@ -9,15 +9,17 @@
 
 # Table
 
-I - [Bet Smart Contract](https://github.com/beirao/backend-decentralize-foot-bet)
+I - [Bet smart contract](https://github.com/beirao/backend-decentralize-foot-bet)
 
-II - [Chainlink External Adapter](https://github.com/beirao/chainlinkEA-decentralize-foot-bet)
+II - [Wrapped api for the Chainlink single word response](https://github.com/beirao/footApiWrap-decentralize-foot-bet)
 
 III - [Auto Deployment Server](https://github.com/beirao/autoDeployment-decentralize-foot-bet)
 
-IV - [API Flask](https://github.com/beirao/flaskAPI-decentralize-foot-bet)
+IV - [API for the frontend](https://github.com/beirao/flaskAPI-decentralize-foot-bet)
 
-V - [Frontend - Web Interface](https://github.com/beirao/frontend-decentralize-foot-bet)
+V - [Centralized Keeper](https://github.com/beirao/smart-contracts-keeper)
+
+VI - [Frontend - Web Interface](https://github.com/beirao/frontend-decentralize-foot-bet)
 
 ## How to bet ?
 
@@ -35,22 +37,22 @@ V - [Frontend - Web Interface](https://github.com/beirao/frontend-decentralize-f
 
 ## How does it work?
 
-- You can only bet the main currency of the blockchain the contract is deployed on. Here **GoerliETH**
+- You can only bet the main currency of the blockchain the contract is deployed on. Here **GoerliETH**.
 - Just below the League there is the match timestamp. After this time you will not be allowed to bet anymore.
 - By clicking on the league title you can access the smart contract on etherscan.
-- The minimum bet value is **0.00001 ETH**
+- The minimum bet value is **0.00001 ETH**.
 - All sides must have a bet. If nobody bet on Home, Draw or Away everyone will be refunded.
 - The odds are located just below their respective side.
 - You can see how much you have already bet just below **Your bets**.
 - If you made a mistake you can cancel all your bets on **Cancel all bets**.
 - You can see the total **Volume** lock on the smart contract.
-- By selecting a side and an amount you will be able to see the **Multiplier** of your bet if you win at the time of the bet according to the volume and other people bets.
+- By selecting a side and an amount you will be able to see the **Multiplier** of your bet at the time of the bet according to the volume and other people bets.
 
 <img src="Annexes/match_demo3.png" width="400" height="400" />
 
 - Once the match started, wait 4 hours and if you had bet the right side you will be able to see your reward on the **/Rewards** page.
 
-<img src="Annexes/match_demo4.png" width="400" height="400" />
+<!-- <img src="Annexes/match_demo4.png" width="400" height="400" /> -->
 
 ## Project structure
 
