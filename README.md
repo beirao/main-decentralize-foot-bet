@@ -17,7 +17,7 @@ III - [Auto Deployment Server](https://github.com/beirao/autoDeployment-decentra
 
 IV - [API for the frontend](https://github.com/beirao/flaskAPI-decentralize-foot-bet)
 
-V - [Centralized Keeper](https://github.com/beirao/smart-contracts-keeper)
+V - [Centralized Keeper](https://github.com/beirao/keeper-decentralize-foot-bet)
 
 VI - [Frontend - Web Interface](https://github.com/beirao/frontend-decentralize-foot-bet)
 
