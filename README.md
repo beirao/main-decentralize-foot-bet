@@ -1,4 +1,4 @@
-# BoarBet : A simple decentralized betting application
+# BoarBet : a simple decentralized betting application
 
 ### ⚡ Live demo on : https://boarbet.beirao.me
 
