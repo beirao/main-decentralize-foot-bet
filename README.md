@@ -41,6 +41,7 @@ VI - [Frontend - Web Interface](https://github.com/beirao/frontend-decentralize-
 - Just below the League there is the match timestamp. After this time you will not be allowed to bet anymore.
 - By clicking on the league title you can access the smart contract on etherscan.
 - The minimum bet value is **0.00001 ETH**.
+- A 2% tax will be levied on the total volume of each valid bet.
 - All sides must have a bet. If nobody bet on Home, Draw or Away everyone will be refunded.
 - The odds are located just below their respective side.
 - You can see how much you have already bet just below **Your bets**.
@@ -54,15 +55,27 @@ VI - [Frontend - Web Interface](https://github.com/beirao/frontend-decentralize-
 
 <!-- <img src="Annexes/match_demo4.png" width="400" height="400" /> -->
 
+## Warning
+
+This decentralized bet application is a proof a concept with unaudited code and should not be use in production in its current state. The **Bet.sol** contract relied on the [football-data.org](https://www.football-data.org/) API. That make the result of each bet sensible to API attack.
+
+The minimum will be to audit the code and make a consensus mechanism between severals foot APIs as explained in _The (almost) fully decentralized way_ part.
+
 ## Project structure
+
+The main element is the **Bet.sol** contract. For each football match one of these contracts will be deployed. The contract know the match timestamp (to lock the betting phase when the match start) and the matchId (to call, once the match is ended, the api and know who is the winner).
+
+To know who win the match, we need an API call in the contract. The best way to do this is by using a Chainlink [external adapters](https://docs.chain.link/docs/external-adapters/) hosted on a Chainlink node. But to make this POC a little less expensive I decide use the simple Chainlink [single word response](https://docs.chain.link/docs/any-api/get-request/examples/single-word-response/) and wrap the [football-data.org](https://www.football-data.org/) API to make the response as simple as possible for the contract.
 
 ![](Annexes/footbet_shema.drawio.png)
 
 ## The (almost) fully decentralized way
 
-Let's see how to improve decentralization:
+Let's see how to improve decentralization : (Ranked by importance)
 
-- For the foot API, make a consensus mechanism between severals foot APIs will make this part semi-decentralized and reduce the API attack risk.
+- For the foot API, we can make a consensus mechanism between severals foot APIs will make this part semi-decentralized and reduce the API attack risk.
+
+- Firstly, we can make the winner information a lot more decentralized by using a Chainlink exteral adapter instead of current wrapped API that use the Chainlink single word response. This external adapter will need a Chainlink node to be hosted.
 
 - By using the [self-automating keeper smart contracts](https://docs.chain.link/docs/chainlink-automation/register-upkeep/) a **BetDeployment.sol** contract will be able to deploy **Bet.sol** contract in a decentralized way. Unfortunately, this feature was in beta when I developed this dapp.
 
