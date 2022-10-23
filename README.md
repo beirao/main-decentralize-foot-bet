@@ -65,7 +65,14 @@ The minimum will be to audit the code and make a consensus mechanism between sev
 
 The main element is the **Bet.sol** contract. For each football match one of these contracts will be deployed. The contract know the match timestamp (to lock the betting phase when the match start) and the matchId (to call, once the match is ended, the api and know who is the winner).
 
-To know who win the match, we need an API call in the contract. The best way to do this is by using a Chainlink [external adapters](https://docs.chain.link/docs/external-adapters/) hosted on a Chainlink node. But to make this POC a little less expensive I decide use the simple Chainlink [single word response](https://docs.chain.link/docs/any-api/get-request/examples/single-word-response/) and wrap the [football-data.org](https://www.football-data.org/) API to make the response as simple as possible for the contract.
+To know who win the match, we need an API call in the contract. The best way to do this is by using a Chainlink [external adapters](https://docs.chain.link/docs/external-adapters/) hosted on a Chainlink node. But to make this POC a little less expensive I decide to use the simple Chainlink [single word response](https://docs.chain.link/docs/any-api/get-request/examples/single-word-response/) and wrap the [football-data.org](https://www.football-data.org/) API to make the response as simple as possible for the contract.
+By the way, an [external adapter](https://github.com/beirao/chainlinkEA-decentralize-foot-bet) was developed but unuse because of the infastructure cost of a [Chainlink node](https://docs.chain.link/docs/running-a-chainlink-node/).
+
+**Bet.sol** is a Chainlink keeper compatible contract. It means that after each match someone have to call the function _performUpKeep()_ to distribute rewards. The best way is to register the contract in the [keeper contract](https://automation.chain.link/) but for reduce the cost and because this part is not very critical (it doesn't matter if people receive their reward late, the money is safe anyway) I decide to make a personalise Keeper.
+
+The **Auto deployment** part deploy all the contracts automatically.
+
+The **API** help the frontend to display updated data.
 
 ![](Annexes/footbet_shema.drawio.png)
 
