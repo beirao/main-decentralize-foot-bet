@@ -1,10 +1,12 @@
-# BoarBet
+# BoarBet : A simple decentralized betting application
 
-#### Key-words :
+### ⚡ Live demo on : https://boarbet.beirao.me
+
+### Key-words :
 
 - Web3, EVM, Dapp
 - Solidity, Node JS, Hardhat, Brownie, Openzepplin, Chainlink Node, External adapters, Chainlink Keeper, Ethers.js, Goerly
-- React JS, Next JS, Moralis, Fleek, IPFS, web3uikit, Tailwindcss
+- React JS, Next JS, Moralis, web3uikit, Tailwindcss
 - Python, Flask API, Docker
 
 # Table
