@@ -21,7 +21,7 @@ IV - [API for the frontend](https://github.com/beirao/flaskAPI-decentralize-foot
 
 V - [Centralized Keeper](https://github.com/beirao/keeper-decentralize-foot-bet)
 
-VI - [Frontend - Web Interface](https://github.com/beirao/frontend-decentralize-foot-bet)
+VI - [Frontend - Web Interface](https://github.com/beirao/front-decentralize-foot-bet)
 
 ## How to bet ?
 
